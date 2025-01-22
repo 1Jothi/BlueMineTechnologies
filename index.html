@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue-Mine-Technologies</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <section>
+    <div class="min-h-screen grid grid-cols-1 gap-7 name content-center text-center back">
+       <img src="logo.png" alt="Company Logo">
+        <!-- <header>
+            <h1>Welcome to Our Professional Page</h1>
+         
+        </header> -->
+        <!-- Title -->
+        <h1 class="head text-5xl font-semibold tracking-[3px] pb-2" id="welcome-title">
+           
+          Welcome
+        </h1>
+    
+        <!-- Dynamic Text -->
+        <div class="text-4xl text-yellow-500 pb-16" id="typewriter">
+           
+          <!-- Typewriter effect will be injected here -->
+        </div>
+    
+        <!-- Contact Me Button
+        <button class="py-2 mx-auto px-7 bg-transparent border-2 w-fit border-blue-500 rounded-sm hover:-translate-y-1.5 duration-[350ms] hover:bg-blue-800" id="butt">
+          <a href="#contact">Contact Me</a>
+        </button> -->
+    
+        <!-- Bouncing Arrow -->
+        <div class="cursor-pointer w-fit left-[48%] lg:left-[62%] absolute bottom-16">
+            
+          <a href="#about" class="text-slate-400">
+            <svg
+              width="24"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              fill="currentColor"
+              class="motion-safe:animate-bounce"
+            >
+              <path d="M12 0c6.623 0 12 5.377 12 12s-5.377 12-12 12-12-5.377-12-12 5.377-12 12-12zm0 1c6.071 0 11 4.929 11 11s-4.929 11-11 11-11-4.929-11-11 4.929-11 11-11zm5.247 8l-5.247 6.44-5.263-6.44-.737.678 6 7.322 6-7.335-.753-.665z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+   
+      <!-- <div class="sidebar">
+        <div class="profile">
+          <img src="profile.jpg" alt="Jothi" class="profile-img">
+          <h3 class="name">Jothi R</h3>
+        </div> -->
+        <!-- <div class="nav-links">
+          <p class="nav-item" onclick="navigateTo('about')"><a href="#about">Home</a></p>
+          <p class="nav-item" onclick="navigateTo('services')"><a href="#services">About Me</a></p>
+          <p class="nav-item" onclick="navigateTo('reviews')"><a href="#reviews">Resume</a></p>
+          <p class="nav-item" onclick="navigateTo('booking')"><a href="#booking">Projects</a></p>
+          <p class="nav-item" onclick="navigateTo('contact')"><a href="#contact">Contact</a></p>
+        </div> -->
+        <!-- <div class="social-icons">
+          <span onclick="window.open('https://github.com/1jothi', '_blank')"><img src="github.png" alt="GitHub"></span>
+          <span onclick="window.open('https://www.instagram.com', '_blank')"><img src="instagram.png" alt="Instagram"></span>
+          <span onclick="window.open('https://www.linkedin.com', '_blank')"><img src="linkedin.png" alt="LinkedIn"></span>
+          <span onclick="window.open('https://www.facebook.com', '_blank')"><img src="facebook.png" alt="Facebook"></span>
+        </div> -->
+      </div>
+    </section>
+    
+      <nav class="left-nav ">
+        <div class="sidebar">
+            <!-- <div class="profile">
+              <img src="profile.jpg" alt="logo" class="logo">
+              <h3 class="name">logo</h3>
+            </div>  -->
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <section>
+    <main>
+        <!-- About Section -->
+        <!-- <section id="about">
+            <h2>About Us</h2>
+            <p>We are a passionate team committed to providing innovative solutions to our clients. We specialize in web development, graphic design, and IT consulting. Our goal is to deliver exceptional service, focused on quality, reliability, and customer satisfaction. We aim to drive results that create value for both businesses and customers.</p>
+       
+        </section> -->
+        <div id="about" class="min-h-screen bg-white flex flex-col text-center gap-5 text-black text-sm lg:text-lg font-normal" >
+            <div class="head text-3xl lg:text-5xl mt-12 font-bold" data-aos="slide-down">
+                About Me
+            </div>
+        
+            <div class="flex flex-col lg:flex-row gap-6">
+                <div class="flex-col mt-14 flex-auto w-64 gap-6">
+                    <h3 class="text-xl lg:text-3xl font-medium" data-aos="fade-left">
+                        I'm <span class="text-yellow-600">Blue-Mine-Technologies</span>
+                    </h3>
+                    <p class="pt-5 leading-7 text-slate-900 text-justify" data-aos="fade-left">
+                        We are a passionate team committed to providing innovative solutions to our clients. We specialize in web development, graphic design, and IT consulting. Our goal is to deliver exceptional service, focused on quality, reliability, and customer satisfaction. We aim to drive results that create value for both businesses and customers.
+                    </p>
+                    <p class="text-justify leading-7 text-slate-900" data-aos="fade-right">
+                        We are a passionate team committed to providing innovative solutions to our clients. We specialize in web development, graphic design, and IT consulting. Our goal is to deliver exceptional service, focused on quality, reliability, and customer satisfaction. We aim to drive results that create value for both businesses and customers.
+                    </p>
+                </div>
+        
+                <!-- Lottie Animation -->
+                <div class="relative flex-auto w-32 sm:rounded-lg pl-4" data-aos="slide-left">
+                    <div class="motion-safe:animate-zoomy">
+                        <lottie-player autoplay loop mode="bounce" src="https://assets10.lottiefiles.com/packages/lf20_w98qte06.json" style="width: 350px;"></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>We offer a comprehensive range of services that cater to diverse business needs:</p>
+            <ul>
+                <li>Web Development: Building responsive, dynamic websites and applications.</li>
+                <li>Graphic Design: Creating stunning designs for web and print.</li>
+                <li>IT Consulting: Providing expert advice to improve your business's IT infrastructure.</li>
+            </ul>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="review">
+            <h2>Customer Reviews</h2>
+            <p>Your feedback is valuable to us! Please leave your review below:</p>
+            <form onsubmit="handleReviewSubmit(event)">
+                <textarea class="input-field" placeholder="Write your review here..." required></textarea>
+                
+                <div class="star-rating">
+                    <span onclick="setStarRating(5)">⭐</span>
+                    <span onclick="setStarRating(4)">⭐</span>
+                    <span onclick="setStarRating(3)">⭐</span>
+                    <span onclick="setStarRating(2)">⭐</span>
+                    <span onclick="setStarRating(1)">⭐</span>
+                </div>
+                
+                <input type="file" id="review-image" class="input-field" accept="image/*">
+                <button type="submit">Submit Review</button>
+            </form>
+            <div class="reviews-list"></div>
+        </section>
+        
+
+        <!-- Booking Section -->
+        <section id="booking" class="booking-form">
+            <h2>Book Now</h2>
+            <form onsubmit="handleBookingSubmit(event)">
+                <input type="text" class="input-field" placeholder="Full Name" required>
+                <input type="text" class="input-field" placeholder="Location" required>
+                <input type="tel" class="input-field" placeholder="Phone Number" required>
+                <input type="email" class="input-field" placeholder="Email" required>
+                <textarea class="input-field" placeholder="Message" required></textarea>
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+       <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>If you need assistance, feel free to contact us:</p>
+    <a href="tel:+1234567890" class="contact-link">
+        <i class="fa fa-phone"></i> Call Us
+    </a>
+    <a href="mailto:info@example.com" class="contact-link">
+        <i class="fa fa-envelope"></i> Email Us
+    </a>
+    <a href="https://wa.me/1234567890" class="contact-link">
+        <i class="fa fa-whatsapp"></i> WhatsApp
+    </a>
+</section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Blue Mine Technologies. All rights reserved.</p>
+    </footer>
+
+ 
+     <script src="script.js"></script>
+</body>
+</html>

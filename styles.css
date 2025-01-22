@@ -1,0 +1,784 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f7fa;
+}
+header {
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+    padding: 3rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease-out;
+}
+header img {
+    width: 120px;
+    margin-bottom: 1rem;
+}
+nav {
+    background-color: #0a0b0c;  /* Changed background color */
+    padding: 1rem;
+    text-align: center;
+    animation: slideIn 1.2s ease-out;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    margin: 0 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #0a0b0c;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+nav a:hover {
+    color: #0f71f1;
+    transform: translateY(-2px);
+}
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+main {
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-out;
+}
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #282626;
+    transition: transform 0.3s ease;
+}
+section:hover {
+    transform: translateY(-5px);
+}
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInLeft 1s ease-out;
+}
+section p  {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #fbf9f9;
+    line-height: 1.6;
+    animation: fadeInRight 1s ease-out;
+}
+section ul  {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #fbf9f9;
+    line-height: 1.6;
+    list-style-type: none;
+    animation: fadeInRight 1s ease-out;
+}
+.input-field {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+.input-field:focus {
+    border-color: #3498db;
+}
+button {
+    background: #479fda;
+    color: white;
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+button:hover {
+    background: #1e3a5f;
+    transform: scale(1.05);
+}
+.review, .contact, .booking-form {
+    animation: fadeInUp 1.2s ease-out;
+}
+.star-rating {
+    font-size: 1.5rem;
+    color: #FFD700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.reviews-list {
+    background: #e8f7e8;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.budget-example {
+    background: #e3f2fd;
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-top: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.budget-example h4 {
+    margin-top: 0;
+    color: #3498db;
+}
+.budget-example p {
+    color: #666;
+    font-size: 1rem;
+}
+.contact a {
+    color: #3498db;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+.contact a:hover {
+    transform: scale(1.1);
+    color: #131c2a;
+}
+
+.whatsapp-logo, .email-logo, .call-logo {
+    width: 30px;
+    margin-right: 10px;
+}
+/* Basic styling for the contact section */
+.contact {
+text-align: center;
+padding: 20px;
+background-color: #282626;
+}
+
+.contact h2 {
+font-size: 2rem;
+margin-bottom: 10px;
+}
+
+.contact p {
+font-size: 1.2rem;
+margin-bottom: 20px;
+}
+
+/* Container for the contact links */
+.contact-methods {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Styling for each contact link */
+.contact-link {
+display: flex;
+align-items: center;
+font-size: 1.2rem;
+text-decoration: none;
+color: #333;
+padding: 10px 20px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+background-color: #ccc;
+}
+
+/* Icon styling */
+.contact-link i {
+margin-right: 8px;
+font-size: 1.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+.contact h2 {
+font-size: 1.8rem;
+}
+
+.contact p {
+font-size: 1rem;
+}
+
+.contact-link {
+font-size: 1rem;
+padding: 8px 16px;
+}
+}
+
+@media (max-width: 480px) {
+.contact h2 {
+font-size: 1.5rem;
+}
+
+.contact p {
+font-size: 0.9rem;
+}
+
+.contact-link {
+font-size: 0.9rem;
+padding: 6px 12px;
+}
+
+.contact-methods {
+flex-direction: column;
+gap: 15px;
+}
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    nav a {
+        font-size: 1rem;
+    }
+    main {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    section {
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+    .input-field, button {
+        font-size: 1rem;
+    }
+}
+
+footer {
+    background-color: #060708;
+    color: #fff;  /* Changed font color to white */
+    text-align: center;
+    padding: 1.5rem 0;
+}
+@font-face {
+    font-family: "Roboto_slab";
+    src: url(./fonts/RobotoSlab-Regular.ttf) format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Gilda_display";
+    src: url(./fonts/GildaDisplay-Regular.ttf) format("truetype");
+  }
+  
+  body {
+    font-family: Roboto_slab, "Times New Roman", Times, serif;
+    background-color: #0f0f0f;
+    color: white;
+  }
+  
+  .min-h-screen {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .head {
+    font-family: Roboto_slab;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+  
+  .text-yellow-500 {
+    color: #ffc107;
+  }
+  
+  .button {
+    background: transparent;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.35s ease, background-color 0.35s ease;
+  }
+  
+  .button:hover {
+    transform: translateY(-5px);
+    background-color: #0056b3;
+  }
+  
+  .motion-safe\:animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  .back {
+    background-color: #0f0f0f;
+  }
+  #typewriter {
+    font-size: 3rem; /* Default font size */
+    font-weight: bold;
+    text-align: center;
+  }
+
+
+
+/* Style the left-side navigation bar */
+.left-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px; /* Set width of the sidebar */
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    padding-left: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* Style the navigation links */
+.left-nav a {
+    
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    transition: background 0.3s, color 0.3s;
+    width: 100%;
+    text-align: left;
+}
+
+/* Change background color on hover */
+.left-nav a:hover {
+    background-color: #3b4452;
+    border-radius: 5px;
+}
+
+/* Add some space between links */
+.left-nav a + a {
+    margin-top: 15px;
+}
+
+/* Adjust content area with padding for the sidebar */
+body {
+    margin-left: 220px; /* Provide space for sidebar */
+    transition: margin-left 0.3s;
+}
+
+/* Make the navigation bar responsive on smaller screens */
+@media (max-width: 768px) {
+    .left-nav {
+        width: 100%;
+        height: auto;
+        position: relative;
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    /* Adjust content area for smaller screens */
+    body {
+        margin-left: 0;
+    }
+
+    .left-nav a {
+        font-size: 1rem;
+        padding: 8px 0;
+    }
+}
+
+
+  
+ 
+  
+  
+  /* about */
+  /* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  
+  /* Heading */
+  .head {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Highlighted text color */
+  .text-yellow-600 {
+    color: #fbbf24;
+  }
+  
+  /* Flex Container */
+  .flex {
+    display: flex;
+    flex-direction: column; /* Stack on mobile, row on larger screens */
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  /* Text size */
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  
+  .lg\:text-3xl {
+    font-size: 2rem;
+  }
+  
+  /* Padding for the text */
+  /* .pt-5 {
+    padding-top: 0.25rem;
+  } */
+  
+  /* Line height for readability */
+  .leading-7 {
+    line-height: 1.50rem;
+  }
+  
+  /* Justified text */
+  .text-justify {
+    text-align: justify;
+  }
+  
+  /* Text color */
+  .text-slate-900 {
+    color: #1e293b;
+  }
+  
+  /* Lottie Animation Container */
+  .relative {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* Lottie Animation */
+  lottie-player {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: auto;
+    display: block;
+  }
+  
+  /* Flex columns for layout adjustments */
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Zoom Animation */
+  .motion-safe\:animate-zoomy {
+    animation: zoom 1s ease-in-out infinite;
+  }
+  
+  @keyframes zoom {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(1.1);
+    }
+    20% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Mobile View (width <= 480px) */
+  @media (max-width: 480px) {
+    #about {
+      padding: 2rem;
+    
+    }
+  
+    .head {
+      font-size: 1.5rem;
+    }
+  
+    .text-xl {
+      font-size: 1rem;
+    }
+  
+    .lg\:text-3xl {
+      font-size: 1.5rem;
+    }
+  
+    .relative {
+      width: 100%;
+      max-width: 350px; /* Decrease the Lottie size */
+      margin-right: 0;
+    }
+  
+    lottie-player {
+      max-width: 150px; /* Decrease the Lottie size */
+    }
+  
+    .text-slate-900 {
+      font-size: 0.9rem; /* Reduce the font size for smaller devices */
+    }
+  }
+  
+  /* Tablet View (width <= 768px) */
+  @media (max-width: 768px) {
+    .head {
+      font-size: 1.75rem;
+    }
+  
+    .flex {
+      flex-direction: column;
+    }
+  
+    .relative {
+      max-width: 300px;
+    }
+  
+    .text-xl {
+      font-size: 1.125rem;
+    }
+  
+    lottie-player {
+      max-width: 100px;
+    }
+  
+    .text-slate-900 {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Laptop/Small Desktop View (width <= 1024px) */
+  @media (max-width: 1024px) {
+    .flex {
+      flex-direction: column-reverse;
+      gap: 2rem;
+    }
+  
+    .relative {
+      max-width: 350px;
+      margin-right: 2rem;
+    }
+  
+    .head {
+      font-size: 2rem;
+    }
+  
+    lottie-player {
+      max-width: 250px;
+    }
+  
+    .text-slate-900 {
+      font-size: 1.125rem;
+    }
+  }
+  
+  /* Large Desktop View (width > 1024px) */
+  @media (min-width: 1024px) {
+    .flex {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .relative {
+      max-width: 400px;
+    }
+  
+    .head {
+      font-size: 2.5rem;
+    }
+  
+    lottie-player {
+      max-width: 250px;
+      padding-bottom: 100px;
+    }
+  
+    .text-slate-900 {
+      font-size: 1.25rem;
+    }
+  }
+  
+
+  /* about  */
+  
+  /* About Section */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  padding: 2rem;
+}
+
+/* Heading */
+.head {
+  font-size: 2rem;
+  font-weight: bold;
+ 
+}
+
+/* Highlighted text color */
+.text-yellow-600 {
+  color: #fbbf24;
+}
+
+/* Flex Container */
+.flex {
+  display: flex;
+  flex-direction: column; /* Stack on mobile, row on larger screens */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+/* Text size */
+.text-xl {
+  font-size: 1.25rem;
+}
+
+/* Adjust text size for larger screens */
+@media (min-width: 768px) {
+  .head {
+      font-size: 2.5rem;
+  }
+
+  .flex {
+      flex-direction: row; /* Row layout on larger screens */
+      gap: 3rem;
+      
+  }
+
+  .text-xl {
+      font-size: 1.5rem;
+  }
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  #about {
+      padding: 1.5rem;
+  }
+
+  .head {
+      font-size: 2rem;
+      text-align: center;
+  }
+
+  .flex {
+      flex-direction: column; /* Column layout for mobile screens */
+      gap: 1.5rem;
+  }
+
+  .text-xl {
+      font-size: 1rem;
+  }
+}
+/* Hide SVG on mobile and tablet */
+lottie-player {
+  display: none;
+}
+
+/* Show the Lottie animation (SVG) for larger screens (768px and up) */
+@media (min-width: 768px) {
+  lottie-player {
+      display: block; /* or inline-block, depending on your layout */
+  }
+}
